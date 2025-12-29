@@ -1,0 +1,23 @@
+## Values for installing kube-prometheus-stack via Helm
+prometheus:
+  prometheusSpec:
+    retention: 10d
+    resources:
+      requests:
+        memory: 256Mi
+        cpu: 100m
+
+alertmanager:
+  enabled: true
+
+kubeStateMetrics:
+  enabled: true
+
+nodeExporter:
+  enabled: true
+
+grafana:
+  enabled: false
+
+ingress:
+  enabled: false
